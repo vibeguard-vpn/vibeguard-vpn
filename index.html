@@ -89,7 +89,7 @@ h1{
       text-shadow: 0 6px 18px rgba(0,0,0,.30);
     }
 .subline{ white-space:nowrap; }
-.brandtext{ min-width: 280px; padding-left: 20px; }
+.brandtext{ min-width: 280px; padding-left: 20px; max-width:100%; }
 .sub{
       margin:6px 0 0;
       color:var(--muted);
@@ -100,6 +100,8 @@ h1{
       display:inline-flex;
       align-items:center;
       gap:8px;
+      flex-wrap:wrap;
+      max-width:100%;
       padding:10px 12px;
       border-radius:999px;
       border:1px solid rgba(216,177,90,.25);
@@ -108,6 +110,8 @@ h1{
       font-size:13px;
       margin-top:12px;
     }
+    .chip > *{ min-width:0; }
+    .chip b, .chip span{ overflow-wrap:anywhere; word-break:break-word; }
     .chip b{
       color:var(--gold2);
       font-weight:700;
